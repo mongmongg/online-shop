@@ -1,0 +1,11 @@
+
+    <%- include("../../shared/includes/head",{pageTitle:"Home"}) %>
+  </head>
+  <body>
+    <%- include("../../shared/includes/header") %>
+    <main>
+        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+        <h1>Welcome</h1>
+        <span>Sign in to access your account, orders, and saved details.</span>        
+    </main>
+<%-include('../../shared/includes/footer')%>

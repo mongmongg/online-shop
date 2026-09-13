@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Geist", sans-serif;
+  --color-white: rgb(255, 255, 255);
+
+  --color-purple-50: rgb(231, 224, 245);
+  --color-purple-300: rgb(168, 85, 247);
+  --color-purple-900: rgb(31, 26, 61);
+
+  --color-purple-300-opa-10: rgba(168, 85, 247, 0.1);
+  --color-purple-300-opa-20: rgba(168, 85, 247, 0.2);
+
+  --color-primary-border-50: rgb(233, 225, 247);
+  --color-primary-border-100: rgb(231, 227, 240);
+  --color-primary-border-200: rgb(231, 224, 245);
+
+  --color-dark-300: rgb(107, 114, 128);
+  --color-dark-700: rgb(17, 24, 39);
+  --color-dark-900: rgb(7, 6, 13);
+
+  --color-error-100: rgb(253, 242, 242);
+  --color-error-500: rgb(220, 38, 38);
+
+  --color-green: rgb(22, 163, 74);
+
+  --color-primary-bg: rgb(247, 244, 255);
+
+  /* Title */
+  --font-size-larger: 3.5rem;
+  --font-size-large: 2.25rem;
+  /* header */
+  --font-size-medium-large: 1.75rem;
+  --font-size-medium: 1.5rem;
+
+  /* logo */
+  --font-size-small: 1.25rem;
+  --font-size-smaller: 1rem;
+  --font-size-smallest: 0.9rem;
+
+  --font-weight-light: 300;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.25rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+
+  --border-radius-small: 8px;
+  --border-radius-medium: 20px;
+
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--color-primary-bg);
+  color: var(--color-dark-300);
+  margin: 0;
+}
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;  
+}
+.btn {
+  cursor: pointer;
+  font: inherit;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-purple-300-opa-10);
+  color: var(--color-purple-300);
+  border: 1px solid var(--color-purple-300-opa-20);
+  border-radius: var(--border-radius-small);
+  width: 100%;
+  text-transform: uppercase;
+}
+.btn:hover,
+.btn:active {
+  background-color: var(--color-purple-300);
+  color: var(--color-white);
+}
