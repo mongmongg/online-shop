@@ -1,0 +1,39 @@
+header {
+  height: 5rem;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+a {
+  font-size: var(--font-size-smallest);
+  color: var(--color-grey-300);
+}
+a:hover {
+  color: var(--color-purple-300);
+  font-weight: var(--font-weight-semi-bold);
+  border-bottom: 2px solid var(--color-purple-300);
+}
+a:active {
+}
+#logo-page a {
+  display: flex;
+  align-items: center;
+}
+#logo-page img {
+  width: var(--font-size-large);
+  height: var(--font-size-large);
+  background-color: var(--color-purple-300);
+}
+#logo-page span {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-purple-900);
+  margin-left: 0.75rem;
+}

@@ -17,6 +17,8 @@ html {
   --color-primary-border-100: rgb(231, 227, 240);
   --color-primary-border-200: rgb(231, 224, 245);
 
+  --color-grey-300:rgb(91, 88, 117);
+  
   --color-dark-300: rgb(107, 114, 128);
   --color-dark-700: rgb(17, 24, 39);
   --color-dark-900: rgb(7, 6, 13);
@@ -29,16 +31,16 @@ html {
   --color-primary-bg: rgb(247, 244, 255);
 
   /* Title */
-  --font-size-larger: 3.5rem;
-  --font-size-large: 2.25rem;
+  --font-size-larger: 3.5rem; /*56px*/
+  --font-size-large: 2.25rem; /*36px*/
   /* header */
-  --font-size-medium-large: 1.75rem;
-  --font-size-medium: 1.5rem;
+  --font-size-medium-large: 1.75rem; /*28px*/
+  --font-size-medium: 1.5rem; /*24px*/
 
   /* logo */
-  --font-size-small: 1.25rem;
+  --font-size-small: 1.25rem; /*20px*/
   --font-size-smaller: 1rem;
-  --font-size-smallest: 0.9rem;
+  --font-size-smallest: 0.9rem; /*14px*/
 
   --font-weight-light: 300;
   --font-weight-semi-bold: 600;
