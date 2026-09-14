@@ -20,8 +20,6 @@ a:hover {
   font-weight: var(--font-weight-semi-bold);
   border-bottom: 2px solid var(--color-purple-300);
 }
-a:active {
-}
 #logo-page a {
   display: flex;
   align-items: center;
