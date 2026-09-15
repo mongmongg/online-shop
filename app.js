@@ -14,12 +14,14 @@ const { handleErrors } = require("./middleware/error-handling");
 const app = express();
 const authRoute = require("./routes/auth.routes");
 const baseRoute = require("./routes/base.routes");
-const {checkAuthStatus} = require("./middleware/check-auth");
+const adminRoute = require("./routes/admin.routes");
+const { checkAuthStatus } = require("./middleware/check-auth");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.use(express.static("public"));
+app.use('/products/assets',express.static("product-data"));
 app.use(express.urlencoded({ extended: false }));
 
 const sessionConfig = createSessionConfig();
@@ -30,6 +32,7 @@ app.use(checkAuthStatus);
 
 app.use(baseRoute);
 app.use(authRoute);
+app.use("/admin", adminRoute);
 app.use(handleErrors);
 
 db.connectToDatabase()

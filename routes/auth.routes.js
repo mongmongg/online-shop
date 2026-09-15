@@ -1,4 +1,5 @@
 const express = require("express");
+const router = express.Router();
 const {
   getSignup,
   getLogin,
@@ -7,7 +8,6 @@ const {
   signout,
 } = require("../controllers/auth.controller");
 
-const router = express.Router();
 
 router.get("/signup", getSignup);
 router.get("/login", getLogin);

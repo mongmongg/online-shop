@@ -8,6 +8,7 @@ html {
 
   --color-purple-50: rgb(231, 224, 245);
   --color-purple-300: rgb(168, 85, 247);
+  --color-purple-500: rgb(126, 52, 195);
   --color-purple-900: rgb(31, 26, 61);
 
   --color-purple-300-opa-10: rgba(168, 85, 247, 0.1);
@@ -17,13 +18,15 @@ html {
   --color-primary-border-100: rgb(231, 227, 240);
   --color-primary-border-200: rgb(231, 224, 245);
 
-  --color-grey-300:rgb(91, 88, 117);
-  
+  --color-grey-300: rgb(91, 88, 117);
+  --color-grey-300-opa: rgba(91, 88, 117, 0.808);
+
   --color-dark-300: rgb(107, 114, 128);
   --color-dark-700: rgb(17, 24, 39);
   --color-dark-900: rgb(7, 6, 13);
 
   --color-error-100: rgb(253, 242, 242);
+  --color-error-300: rgb(251, 184, 184);
   --color-error-500: rgb(220, 38, 38);
 
   --color-green: rgb(22, 163, 74);
@@ -65,7 +68,7 @@ body {
 }
 main {
   width: 90%;
-  max-width: 50rem;
+  max-width: 90rem;
   margin: 0 auto;
 }
 ul,
@@ -75,7 +78,16 @@ ol {
   padding: 0;
 }
 a {
-  text-decoration: none;  
+  text-decoration: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.open {
+  display: none;
 }
 .btn {
   cursor: pointer;
@@ -88,8 +100,19 @@ a {
   width: 100%;
   text-transform: uppercase;
 }
+.alert-btn {
+  background-color: var(--color-error-100);
+  color: var(--color-error-500);
+  border-color:var(--color-error-300);
+}
 .btn:hover,
 .btn:active {
   background-color: var(--color-purple-300);
   color: var(--color-white);
+}
+.image-preview {
+  width: 7.5rem;
+  height: 7.5rem;
+  overflow: hidden;
+  border-radius: var(--border-radius-small);
 }

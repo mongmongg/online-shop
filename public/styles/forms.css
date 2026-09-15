@@ -5,7 +5,7 @@ h1 {
 span {
   font-size: var(--font-size-smallest);
 }
-form {
+main form {
   background-color: var(--color-white);
   border: 1px solid var(--color-primary-border-100);
   border-radius: var(--border-radius-medium);
@@ -56,4 +56,16 @@ textarea:focus {
 }
 .alert {
   color: var(--color-error-500);
+}
+.btn-container {
+  display: flex;
+  width: 30%;
+  gap: var(--space-1);
+}
+.btn-container .btn {
+  text-transform: none;
+  padding: var(--space-1) var(--space-2);
+}
+.btn-alt{
+  background-color: transparent;
 }

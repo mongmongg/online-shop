@@ -1,0 +1,20 @@
+<li class="product-item">
+  <article>
+    <img
+      src="<%= productData.imageUrl %>"
+      alt="<%= productData.name%>"
+      class="product-image"
+    />
+    <div class="product-content">
+      <p class="product-title"><%= productData.name%></p>
+      <p class="product-title">$<%= productData.price%></p>
+      <p class="product-summary"><%= productData.summary%></p>
+      <% if(!locals.isAdmin){ %>
+      <button class="product-add-btn btn">+Add to Cart</button>
+      <% } else{%>
+      <button class="product-alt-btn btn">Edit</button>
+      <button class="product-alt-btn alert-btn btn">Remove</button>
+      <% } %>
+    </div>
+  </article>
+</li>

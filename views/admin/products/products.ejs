@@ -1,0 +1,27 @@
+
+    <%- include("../../shared/includes/head",{pageTitle:"Home"}) %>   
+   <link rel="stylesheet" href="/styles/product.css">
+   <link rel="stylesheet" href="/styles/product-item.css">
+  </head>
+  <body >
+    <%- include("../../shared/includes/header") %>
+    <main>
+        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+        <h1>Manage Products</h1>
+        <span>Sign in to access your account, orders, and saved details.</span>        
+        <section class="catalog-section">
+          <form action="" method="GET">
+            <div id="catalog-header">
+              <h2>Collecion</h2> 
+              <a href="/admin/products/new"class="btn catalog-btn">Add New Product</a>
+            </div>
+            <ul class="product-list" >
+              <% for(const product of products){ %>
+                <%- include('../../shared/includes/product-item',{productData:product}) %>
+              <%}%>              
+            </ul>
+          </form>
+        </section>
+      </main>
+    
+<%-include('../../shared/includes/footer')%>

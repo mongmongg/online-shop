@@ -1,33 +1,15 @@
 <header>
-  <div id="logo-page">
-    <a href="/"><img src="" alt=""><span>
-      WDE
-    </span></a>
+  <div id="mobile-btn">
+    <span class="burger-btn"></span>
+    <span class="burger-btn"></span>
+    <span class="burger-btn"></span>
   </div>
-  <nav>
-    <ul>
-      <% if(!locals.isAdmin){ %>
-      <li><a href="/">Products</a></li>
-      <li><a href="/cart">Cart</a></li>
-      <% } %>
-      <% if(locals.isAuth &&!locals.isAdmin){ %>
-      <li><a href="/order">Orders</a></li>
-      <% } %>
-      <% if(locals.isAdmin){ %>
-        <li><a href="/admin/products">Manage Products</a></li>
-        <li><a href="/admin/order">Manage Order</a></li>
-      <% } %>
-      <% if(!locals.isAuth){ %>
-        <li><a href="/signup">Signup</a></li>
-        <li><a href="/login">Sign in</a></li>
-        <% } %>
-      <% if(locals.isAuth){ %>
-      <li>
-        <form action="/logout" method="post">
-          <button>Log out</button></li>          
-        </form>
-      <% } %>
-      
-    </ul>
-  </nav>
+  <div id="logo-page">
+    <a href="/"><img src="" alt="" /><span> WDE </span></a>
+  </div>
+  <nav id="nav"><%- include('./navigation-list') %></nav>  
 </header>
+<aside id="mobile-menu">
+  <div class="close-menu-btn"><button>X</button></div>
+  <nav id="mobile-nav"><%- include('./navigation-list') %></nav>
+</aside>

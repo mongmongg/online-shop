@@ -1,0 +1,43 @@
+
+    <%- include("../../shared/includes/head",{pageTitle:"Create New Product"}) %>   
+    <link rel="stylesheet" href="/styles/forms.css">
+  </head>
+  <body >
+    <%- include("../../shared/includes/header") %>
+    <main>        
+        <form action="/admin/products?_csrf=<%= locals.csrfToken %>" method="POST" enctype="multipart/form-data">
+          <h1>Create New Products</h1>
+          <span>Sign in to access your account, orders, and saved details.</span>        
+          <section>
+            <p>
+              <label for="name">Product Name</label>
+              <input type="text" name="name"></p>
+            <p>
+              <label for="price">Price</label>
+              <input type="number" name="price" min="1" step="1"required>
+            </p>
+            <p>
+              <label for="summary">Summary</label>
+              <input type="text" name="summary" required>
+            </p>
+            <p>
+              <label for="description">Description</label>
+              <textarea name="description" cols="30" rows="7" required></textarea>
+              
+            </p>
+            <p>
+              <label for="image">Image</label>
+              <input type="file" name="image" accept="image/png, image/jpeg" id="product-add-image">
+              <img src="" alt="" class="image-preview">
+              
+            </p>  
+            <p class="btn-container">
+              <button type="reset"class="btn btn-alt">Reset</button>
+              <button class="btn">Save</button>
+            </p> 
+          </section>
+         
+        </form>
+        
+    </main>
+<%-include('../../shared/includes/footer')%>
